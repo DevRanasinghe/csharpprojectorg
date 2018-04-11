@@ -31,13 +31,13 @@ namespace Servo_control
             timer1.Start();
             timer1.Interval = 1;
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen == true)
             {
                 char n = Convert.ToChar(Convert.ToInt32(txtValue1.Text)); // send the signals
-                char m = Convert.ToChar(Convert.ToInt32(txtValue2.Text));
+                char m = Convert.ToChar(Convert.ToInt32(txtValue2.Text)); // send signal 
                 char p = Convert.ToChar(Convert.ToInt32(txtValue3.Text));
                 serialPort1.Write(n.ToString());
                 serialPort1.Write(m.ToString());
