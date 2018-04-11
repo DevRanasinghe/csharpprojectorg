@@ -36,7 +36,7 @@ namespace Servo_control
         {
             if (serialPort1.IsOpen == true)
             {
-                char n = Convert.ToChar(Convert.ToInt32(txtValue1.Text));
+                char n = Convert.ToChar(Convert.ToInt32(txtValue1.Text)); // send the signals
                 char m = Convert.ToChar(Convert.ToInt32(txtValue2.Text));
                 char p = Convert.ToChar(Convert.ToInt32(txtValue3.Text));
                 serialPort1.Write(n.ToString());
